@@ -57,7 +57,23 @@ const data = {
     image: peer2
   },
 ],
- 
+ Achievements: [
+  {
+    icon: "🏆",
+    title: "350+ Problems Solved",
+    desc: "Solved 200+ problems on LeetCode and 150+ on GeeksforGeeks improving problem-solving skills."
+  },
+  {
+    icon: "🏅",
+    title: "LeetCode Badges",
+    desc: "Earned multiple badges including 50 Days Badge showing consistency and daily practice."
+  },
+  {
+    icon: "🎯",
+    title: "NPTEL Elite Grade",
+    desc: "Achieved Elite grade in Cloud Computing from IIT Kharagpur with strong understanding."
+  }
+],
   certs: [
     {
       name: "Generative AI Professional",
@@ -112,24 +128,24 @@ const data = {
     { school: "T. P. Verma College", loc: "Patna, Bihar", degree: "Intermediate (12th) — Science", grade: "85.4%", date: "Apr 2021 – May 2022", type: "Completed", color: "#6af0d4" },
     { school: "SPS Balhn More Areraj", loc: "Motihari, Bihar", degree: "Matriculation (10th)", grade: "90%", date: "Apr 2019 – May 2020", type: "Completed", color: "#ff6ab0" },
   ],
-  resumeTabs: ["Education", "Skills", "Projects", "Extracurricular", "Certificates"],
-  extracurricular: [
-    {
-    icon: "🏆",
-    title: "350+ Problems Solved",
-    desc: "Solved 200+ problems on LeetCode and 150+ on GeeksforGeeks improving problem-solving skills."
-  },
-  {
-    icon: "🏅",
-    title: "LeetCode Badges",
-    desc: "Earned multiple badges including 50 Days Badge showing consistency and daily practice."
-  },
-  {
-    icon: "🎯",
-    title: "NPTEL Elite Grade",
-    desc: "Achieved Elite grade in Cloud Computing from IIT Kharagpur with strong understanding."
-  }
-  ],
+  resumeTabs: ["Education", "Skills", "Projects", "Achievements", "Certificates"],
+  // extracurricular: [
+  //   {
+  //   num: "🏆 ",
+  //   text: "Solved 200+ problems on LeetCode and 150+ problems on GeeksforGeeks — consistently improving algorithmic thinking and problem-solving skills.",
+  //   highlight: "350+ Problems Solved"
+  // },
+  // {
+  //   num: "🏅",
+  //   text: "Earned multiple badges on LeetCode including the 50 Days Badge — showcasing strong consistency and daily coding practice.",
+  //   highlight: "LeetCode Badges"
+  // },
+  // {
+  //   num: "🎯",
+  //   text: "Achieved Elite grade in NPTEL Cloud Computing from IIT Kharagpur — placed among top performers with strong understanding of distributed systems.",
+  //   highlight: "NPTEL Elite Grade"
+  // }
+ // ],
 };
 
 // ── Hooks ──────────────────────────────────────────────
@@ -545,7 +561,7 @@ function Resume() {
               border: tab===t ? "none" : "1px solid rgba(124,106,255,0.25)",
               boxShadow: tab===t ? "0 5px 20px rgba(124,106,255,0.4)" : "none",
             }}>
-              {{Education:"🎓",Skills:"⚡",Projects:"💼",Extracurricular:"🏆",Certificates:"📜"}[t]} {t}
+              {{Education:"🎓",Skills:"⚡",Projects:"💼",Achievements:"🏆",Certificates:"📜"}[t]} {t}
             </button>
           ))}
         </div>
@@ -629,10 +645,10 @@ function Resume() {
             ))}
           </div>
         )}
-        {/* EXTRACURRICULAR */}
-{tab === "Extracurricular" && (
+        {/* ACHIEVEMENTS */}
+{tab === "Achievements" && (
   <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
-    {data.extracurricular.map((e,i) => (
+    {data.Achievements.map((e,i) => (
       <div key={i}
         style={{
           background:"#111118",
