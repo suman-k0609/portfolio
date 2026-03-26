@@ -15,7 +15,7 @@ const CV_IMAGE = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1B
 const data = {
   name: "Suman Kumari",
   tagline: "Full-Stack Developer & CSE Student",
-  sub: "Building real-time web apps, scalable backends, and clean interfaces with the MERN stack.",
+  sub: "Passionate about full stack development and have a strong interest in building modern, user-friendly websites and web applications.",
   email: "sumankumari200603@gmail.com",
   phone: "+91-9508420336",
   linkedin: "https://linkedin.com/in/suman-kumari-e08/",
@@ -33,7 +33,7 @@ const data = {
   { 
     period: "Oct 2025 – Dec 2025",
     title: "Real-Time Sports Scoreboard",
-    desc: "Full-stack sports event tracking platform delivering live scores, upcoming matches, completed events, and league standings through a centralized system with efficient real-time data flow.",
+    desc: "I created a learning platform where students can upload, share, and discuss study materials. It includes login, file sharing, and review features to make learning easier.",
     tech: ["React.js", "Node.js", "Express", "MongoDB", "JavaScript"],
     link: "https://github.com/suman-k0609/Score-Pulse",
     image: peer
@@ -51,7 +51,7 @@ const data = {
   { 
     period: "Aug 2024 – Sep 2024",
     title: "Car Rental & Reservation System",
-    desc: "Intuitive car rental system with car listings, booking forms, rental cost calculation, and confirmation flow — all with a clean, user-friendly interface.",
+    desc: "I developed a car rental website where users can view cars, book them, and calculate rental costs easily with a simple and user-friendly interface.",
     tech: ["HTML", "CSS", "JavaScript"],
     link: "https://github.com/suman-k0609/carrental",
     image: peer2
@@ -92,17 +92,17 @@ const data = {
   ],
   achievements: [
   {
-    num: "01",
+    num: "🏆 ",
     text: "Solved 200+ problems on LeetCode and 150+ problems on GeeksforGeeks — consistently improving algorithmic thinking and problem-solving skills.",
     highlight: "350+ Problems Solved"
   },
   {
-    num: "02",
+    num: "🏅",
     text: "Earned multiple badges on LeetCode including the 50 Days Badge — showcasing strong consistency and daily coding practice.",
     highlight: "LeetCode Badges"
   },
   {
-    num: "03",
+    num: "🎯",
     text: "Achieved Elite grade in NPTEL Cloud Computing from IIT Kharagpur — placed among top performers with strong understanding of distributed systems.",
     highlight: "NPTEL Elite Grade"
   }
@@ -202,7 +202,7 @@ function Nav() {
       borderBottom:"1px solid rgba(124,106,255,0.15)",
       transition:"background 0.3s",
     }}>
-      <div style={{ fontFamily:"'Syne',sans-serif",fontWeight:800,fontSize:"1.25rem",background:"linear-gradient(90deg,#7c6aff,#ff6ab0)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent" }}>SK.</div>
+      <div style={{ fontFamily:"'Syne',sans-serif",fontWeight:800,fontSize:"1.25rem",background:"linear-gradient(90deg,#7c6aff,#ff6ab0)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent" }}>Suman Kumari</div>
       <ul style={{ display:"flex",gap:"1.4rem",listStyle:"none",margin:0,padding:0 }}>
         {links.map(l => (
           <li key={l}>
@@ -234,67 +234,198 @@ function SectionHeader({ tag, title, desc }) {
 // ── HOME ──────────────────────────────────────────────
 function Home() {
   return (
-    <section id="home" style={{ minHeight:"100vh",display:"flex",alignItems:"center",padding:"0 6%",paddingTop:"5rem",position:"relative",overflow:"hidden" }}>
-      <div style={{ position:"absolute",width:500,height:500,borderRadius:"50%",filter:"blur(120px)",background:"rgba(124,106,255,0.13)",top:-100,right:-100,pointerEvents:"none" }}/>
-      <div style={{ position:"absolute",width:350,height:350,borderRadius:"50%",filter:"blur(100px)",background:"rgba(255,106,176,0.08)",bottom:0,left:0,pointerEvents:"none" }}/>
+    <section 
+      id="home" 
+      style={{
+        minHeight:"100vh",
+        display:"flex",
+        alignItems:"center",
+        padding:"0 6%",
+        paddingTop:"5rem",
+        position:"relative",
+        overflow:"hidden",
+
+        // 🔥 NEW BACKGROUND GLOW
+        background:
+          "radial-gradient(circle at 20% 50%, rgba(124,106,255,0.15), transparent 40%), radial-gradient(circle at 80% 50%, rgba(255,106,176,0.12), transparent 40%), #0a0a0f"
+      }}
+    >
+
+      {/* 🔥 EXTRA BLOBS */}
+      <div style={{ position:"absolute",width:500,height:500,borderRadius:"50%",filter:"blur(120px)",background:"rgba(124,106,255,0.13)",top:-100,right:-100 }} />
+      <div style={{ position:"absolute",width:350,height:350,borderRadius:"50%",filter:"blur(100px)",background:"rgba(255,106,176,0.08)",bottom:0,left:0 }} />
+
+      {/* LEFT CONTENT */}
       <div style={{ flex:1,maxWidth:640,zIndex:1 }}>
+
+        {/* STATUS */}
         <FadeUp delay={0}>
-          <div style={{ display:"inline-flex",alignItems:"center",gap:".5rem",background:"rgba(124,106,255,0.1)",border:"1px solid rgba(124,106,255,0.25)",borderRadius:100,padding:".35rem .95rem",fontSize:".8rem",color:"#7c6aff",marginBottom:"1.5rem",fontWeight:500 }}>
-            <span style={{ width:7,height:7,borderRadius:"50%",background:"#6af0d4",animation:"pulse 2s infinite",display:"inline-block" }}/>
-            Available for Opportunities
+          <div style={{
+            display:"inline-flex",
+            alignItems:"center",
+            gap:"0.5rem",
+            padding:"0.4rem 1rem",
+            borderRadius:"999px",
+            background:"rgba(106,240,212,0.1)",
+            border:"1px solid rgba(106,240,212,0.3)",
+            color:"#6af0d4",
+            fontSize:"0.8rem",
+            marginBottom:"1.5rem"
+          }}>
+            ● Available for Opportunities
           </div>
         </FadeUp>
+
+        {/* HEADING */}
         <FadeUp delay={100}>
-          <h1 style={{ fontFamily:"'Syne',sans-serif",fontSize:"clamp(2.8rem,6vw,5rem)",fontWeight:800,lineHeight:1.05,letterSpacing:"-2px",marginBottom:".8rem",color:"#f0eeff" }}>
-            <span style={{ display:"block",fontSize:"clamp(1.4rem,2.5vw,2rem)",color:"#8882aa",letterSpacing:"0",fontWeight:400 }}>Hi, I'm</span>
-            <span style={{ background:"linear-gradient(135deg,#7c6aff,#ff6ab0)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent" }}>Suman Kumari</span>
+          <h1 style={{
+            fontFamily:"'Syne',sans-serif",
+            fontSize:"clamp(3rem,6vw,5.2rem)",
+            fontWeight:800,
+            lineHeight:1.1,
+            marginBottom:"1rem"
+          }}>
+            <span style={{
+              display:"block",
+              fontSize:"1.4rem",
+              color:"#9ca3af",
+              fontWeight:400
+            }}>
+              Hi, I'm
+            </span>
+
+            <span style={{
+              background:"linear-gradient(90deg,#7c6aff,#ff6ec7)",
+              WebkitBackgroundClip:"text",
+              WebkitTextFillColor:"transparent"
+            }}>
+              Suman Kumari
+            </span>
           </h1>
         </FadeUp>
+
+        {/* SUBTEXT */}
         <FadeUp delay={200}>
-          <p style={{ fontSize:"1.05rem",color:"#8882aa",lineHeight:1.7,marginBottom:"2rem",fontWeight:300,maxWidth:520 }}>{data.sub}</p>
+          <p style={{
+            fontSize:"1.05rem",
+            color:"#d1d5db",
+            lineHeight:1.7,
+            marginBottom:"2rem",
+            maxWidth:520
+          }}>
+            {data.sub}
+          </p>
         </FadeUp>
+
+        {/* BUTTONS */}
         <FadeUp delay={300}>
           <div style={{ display:"flex",gap:"1rem",flexWrap:"wrap",marginBottom:"2.5rem" }}>
-            <a href="#contact" style={{ background:"#7c6aff",color:"#fff",padding:".75rem 1.8rem",borderRadius:8,textDecoration:"none",fontSize:".9rem",fontWeight:600,transition:"all .25s",display:"inline-flex",alignItems:"center",gap:".4rem" }}>Hire Me →</a>
-            <a href="#projects" style={{ background:"transparent",color:"#f0eeff",border:"1px solid rgba(124,106,255,0.3)",padding:".75rem 1.8rem",borderRadius:8,textDecoration:"none",fontSize:".9rem",fontWeight:500 }}>View Projects</a>
+
+            {/* PRIMARY */}
+            <a 
+              href="#contact" 
+              style={{
+                background:"linear-gradient(135deg,#7c6aff,#ff6ec7)",
+                color:"#fff",
+                padding:"0.85rem 2rem",
+                borderRadius:"999px",
+                textDecoration:"none",
+                fontWeight:600,
+                boxShadow:"0 5px 20px rgba(124,106,255,0.4)",
+                transition:"all 0.3s ease"
+              }}
+              onMouseEnter={(e)=>e.currentTarget.style.transform="translateY(-3px)"}
+              onMouseLeave={(e)=>e.currentTarget.style.transform="translateY(0)"}
+            >
+              Hire Me →
+            </a>
+
+            {/* SECONDARY */}
+            <a 
+              href="#projects" 
+              style={{
+                border:"1px solid rgba(124,106,255,0.4)",
+                padding:"0.85rem 2rem",
+                borderRadius:"999px",
+                color:"#d1d5db",
+                textDecoration:"none",
+                transition:"all 0.3s ease"
+              }}
+            >
+              View Projects
+            </a>
+
           </div>
         </FadeUp>
+
+        {/* STATS */}
         <FadeUp delay={400}>
           <div style={{ display:"flex",gap:"2.5rem" }}>
             {data.stats.map((s,i) => (
               <div key={i}>
-                <div style={{ fontFamily:"'Syne',sans-serif",fontSize:"1.7rem",fontWeight:700,color:"#7c6aff" }}>
+                <div style={{
+                  fontFamily:"'Syne',sans-serif",
+                  fontSize:"1.8rem",
+                  fontWeight:700,
+                  color:"#a78bfa"
+                }}>
                   <AnimNum value={s.num}/>
                 </div>
-                <div style={{ fontSize:".73rem",color:"#8882aa",marginTop:".2rem" }}>{s.label}</div>
+                <div style={{ fontSize:".75rem",color:"#9ca3af" }}>
+                  {s.label}
+                </div>
               </div>
             ))}
           </div>
         </FadeUp>
+
       </div>
-      <div style={{ flexShrink:0,width:"min(300px,36vw)",aspectRatio:1,marginLeft:"4rem",zIndex:1 }}>
+
+      {/* RIGHT IMAGE */}
+      <div style={{
+        flexShrink:0,
+        width:"min(320px,36vw)",
+        aspectRatio:1,
+        marginLeft:"4rem",
+        zIndex:1
+      }}>
         <FadeUp delay={200}>
-         <div className="hero-img-ring" style={{width:"100%",aspectRatio:1,borderRadius:"50%",border:"2px solid rgba(124,106,255,0.2)",padding:10,background:"radial-gradient(circle at 60% 40%,rgba(124,106,255,0.1),transparent 70%)"}}>
-  <div className="hero-img-inner" style={{width:"100%",aspectRatio:1,borderRadius:"50%",overflow:"hidden",border:"2px solid rgba(124,106,255,0.15)"}}>
-    <img 
-      src={profile} 
-      alt="Suman Kumari" 
-      style={{
-        width:"100%",
-        height:"100%",
-        objectFit:"cover",
-        objectPosition:"50% 10%",
-        display:"block"
-      }}
-    />
-  </div>
-</div>
+          
+          {/* 🔥 GRADIENT RING */}
+          <div style={{
+            width:"100%",
+            aspectRatio:1,
+            borderRadius:"50%",
+            padding:"6px",
+            background:"linear-gradient(135deg,#7c6aff,#ff6ec7)"
+          }}>
+            
+            <div style={{
+              width:"100%",
+              height:"100%",
+              borderRadius:"50%",
+              overflow:"hidden"
+            }}>
+              <img 
+                src={profile} 
+                alt="Suman Kumari" 
+                style={{
+                  width:"100%",
+                  height:"100%",
+                  objectFit:"cover",
+                  objectPosition:"50% 10%"
+                }}
+              />
+            </div>
+
+          </div>
+
         </FadeUp>
       </div>
+
     </section>
   );
 }
-
 // ── ABOUT ─────────────────────────────────────────────
 function About() {
   return (
@@ -354,129 +485,191 @@ function About() {
 // ── RESUME ────────────────────────────────────────────
 function Resume() {
   const [tab, setTab] = useState("Education");
+
   return (
     <section id="resume" style={{ padding:"6rem 6%",background:"#0a0a0f" }}>
-      <SectionHeader tag="My Resume" title="My Resume" desc="Contact details, education, skills, projects & certifications — tailored for tech industry roles." />
+      
+      <SectionHeader 
+        tag="My Resume" 
+        title="My Resume" 
+        desc="Contact details, education, skills, projects & certifications — tailored for tech industry roles." 
+      />
+
+      {/* 🔥 CONTACT BAR */}
       <FadeUp delay={0}>
-        <div style={{ background:"#111118",border:"1px solid rgba(124,106,255,0.18)",borderRadius:12,padding:"1rem 1.8rem",display:"flex",flexWrap:"wrap",gap:"1.5rem",alignItems:"center",justifyContent:"center",margin:"2rem 0" }}>
+        <div style={{
+          background:"#111118",
+          border:"1px solid rgba(124,106,255,0.25)",
+          borderRadius:"14px",
+          padding:"1rem 1.8rem",
+          display:"flex",
+          flexWrap:"wrap",
+          gap:"1.5rem",
+          justifyContent:"center",
+          margin:"2rem 0",
+          boxShadow:"0 0 15px rgba(124,106,255,0.1)"
+        }}>
           {[["📧",data.email,`mailto:${data.email}`],["📱",data.phone,null],["💼","LinkedIn",data.linkedin],["🐙","GitHub",data.github]].map(([icon,label,href],i) => (
-            <div key={i} style={{display:"flex",alignItems:"center",gap:".45rem",fontSize:".82rem",color:"#8882aa"}}>
-              {icon} {href ? <a href={href} target="_blank" rel="noreferrer" style={{color:"#8882aa",textDecoration:"none"}}>{label}</a> : <span>{label}</span>}
+            <div key={i} style={{display:"flex",alignItems:"center",gap:".45rem",fontSize:".85rem",color:"#9ca3af"}}>
+              {icon} {href ? <a href={href} target="_blank" rel="noreferrer" style={{color:"#9ca3af",textDecoration:"none"}}>{label}</a> : <span>{label}</span>}
             </div>
           ))}
         </div>
       </FadeUp>
+
+      {/* 🔥 TABS */}
       <FadeUp delay={100}>
-        <div style={{ display:"flex",gap:".45rem",flexWrap:"wrap",marginBottom:"1.8rem" }}>
+        <div style={{ display:"flex",gap:".6rem",flexWrap:"wrap",marginBottom:"2rem" }}>
           {data.resumeTabs.map(t => (
             <button key={t} onClick={()=>setTab(t)} style={{
-              padding:".5rem 1.2rem",borderRadius:8,fontSize:".83rem",fontWeight:500,cursor:"pointer",fontFamily:"inherit",transition:"all .2s",
-              background: tab===t ? "#7c6aff" : "transparent",
-              color: tab===t ? "#fff" : "#8882aa",
-              border: tab===t ? "1px solid #7c6aff" : "1px solid rgba(124,106,255,0.2)",
-              boxShadow: tab===t ? "0 4px 18px rgba(124,106,255,0.35)" : "none",
+              padding:".55rem 1.3rem",
+              borderRadius:"999px",
+              fontSize:".85rem",
+              cursor:"pointer",
+              transition:"all 0.3s ease",
+              background: tab===t 
+                ? "linear-gradient(135deg,#7c6aff,#ff6ec7)" 
+                : "transparent",
+              color: tab===t ? "#fff" : "#9ca3af",
+              border: tab===t ? "none" : "1px solid rgba(124,106,255,0.25)",
+              boxShadow: tab===t ? "0 5px 20px rgba(124,106,255,0.4)" : "none",
             }}>
               {{Education:"🎓",Skills:"⚡",Projects:"💼",Extracurricular:"🏆",Certificates:"📜"}[t]} {t}
             </button>
           ))}
         </div>
       </FadeUp>
+
+      {/* 🔥 CONTENT */}
       <FadeUp delay={150}>
+
+        {/* EDUCATION */}
         {tab==="Education" && (
-          <div style={{display:"flex",flexDirection:"column",gap:".9rem"}}>
+          <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
             {data.education.map((e,i) => (
-              <div key={i} style={{background:"#111118",border:"1px solid rgba(124,106,255,0.18)",borderRadius:13,padding:"1.5rem 1.8rem"}}>
-                <div style={{fontSize:".7rem",color:"#6af0d4",fontWeight:600,letterSpacing:".8px",textTransform:"uppercase",marginBottom:".3rem"}}>{e.degree}</div>
-                <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:1}}>
-                  <div style={{fontFamily:"'Syne',sans-serif",fontWeight:700,fontSize:".95rem",color:"#f0eeff"}}>{e.school}</div>
-                  <div style={{fontSize:".72rem",color:"#8882aa",whiteSpace:"nowrap"}}>{e.date}</div>
+              <div key={i}
+                style={{
+                  background:"#111118",
+                  border:"1px solid rgba(124,106,255,0.25)",
+                  borderRadius:"14px",
+                  padding:"1.6rem 1.9rem",
+                  transition:"all 0.3s ease"
+                }}
+                onMouseEnter={(e)=>{e.currentTarget.style.transform="translateY(-5px)";e.currentTarget.style.boxShadow="0 10px 25px rgba(124,106,255,0.25)";}}
+                onMouseLeave={(e)=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none";}}
+              >
+                <div style={{color:"#6af0d4",fontSize:".75rem",marginBottom:".3rem"}}>{e.degree}</div>
+                <div style={{display:"flex",justifyContent:"space-between"}}>
+                  <strong style={{color:"#fff"}}>{e.school}</strong>
+                  <span style={{color:"#9ca3af",fontSize:".75rem"}}>{e.date}</span>
                 </div>
-                <div style={{fontSize:".8rem",color:"#8882aa",marginTop:".25rem"}}>{e.loc} · Grade: <strong style={{color:"#7c6aff"}}>{e.grade}</strong></div>
+                <div style={{color:"#9ca3af",fontSize:".85rem"}}>
+                  {e.loc} · Grade: <span style={{color:"#a78bfa"}}>{e.grade}</span>
+                </div>
               </div>
             ))}
           </div>
         )}
+
+        {/* SKILLS */}
         {tab==="Skills" && (
-          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(230px,1fr))",gap:".9rem"}}>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(230px,1fr))",gap:"1rem"}}>
             {data.skills.map((s,i) => (
-              <div key={i} style={{background:"#111118",border:"1px solid rgba(124,106,255,0.18)",borderRadius:12,padding:"1.2rem 1.4rem"}}>
-                <div style={{fontFamily:"'Syne',sans-serif",fontWeight:700,fontSize:".75rem",color:"#8882aa",textTransform:"uppercase",letterSpacing:".8px",marginBottom:".9rem"}}>{s.icon} {s.title}</div>
-                {[85,80,75,70].slice(0,s.tags.length>4?4:s.tags.length).map((pct,j) => (
-                  <div key={j} style={{marginBottom:".75rem"}}>
-                    <div style={{display:"flex",justifyContent:"space-between",fontSize:".79rem",marginBottom:".28rem"}}><span style={{color:"#f0eeff"}}>{s.tags[j]}</span><span style={{color:"#7c6aff",fontWeight:600}}>{pct+j}%</span></div>
-                    <div style={{height:4,background:"rgba(255,255,255,0.07)",borderRadius:99,overflow:"hidden"}}>
-                      <div style={{height:"100%",width:`${pct+j}%`,background:`linear-gradient(90deg,${s.color},#7c6aff)`,borderRadius:99}}/>
-                    </div>
-                  </div>
-                ))}
+              <div key={i}
+                style={{
+                  background:"#111118",
+                  border:"1px solid rgba(124,106,255,0.25)",
+                  borderRadius:"14px",
+                  padding:"1.3rem",
+                  transition:"all 0.3s ease"
+                }}
+                onMouseEnter={(e)=>{e.currentTarget.style.transform="translateY(-5px)";e.currentTarget.style.boxShadow="0 10px 25px rgba(124,106,255,0.25)";}}
+                onMouseLeave={(e)=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none";}}
+              >
+                <strong style={{color:"#fff"}}>{s.title}</strong>
+                <div style={{marginTop:"0.5rem",color:"#9ca3af"}}>{s.tags.join(", ")}</div>
               </div>
             ))}
           </div>
         )}
+
+        {/* PROJECTS */}
         {tab==="Projects" && (
-          <div style={{display:"flex",flexDirection:"column",gap:".9rem"}}>
+          <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
             {data.projects.map((p,i) => (
-              <div key={i} style={{background:"#111118",border:"1px solid rgba(124,106,255,0.18)",borderRadius:14,padding:"1.5rem 1.8rem"}}>
-                <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:1,marginBottom:".3rem"}}>
-                  <div style={{fontFamily:"'Syne',sans-serif",fontWeight:700,fontSize:".95rem",color:"#f0eeff"}}>{p.title}</div>
-                  <div style={{fontSize:".72rem",color:"#8882aa",whiteSpace:"nowrap"}}>{p.period}</div>
+              <div key={i}
+                style={{
+                  background:"#111118",
+                  border:"1px solid rgba(124,106,255,0.25)",
+                  borderRadius:"14px",
+                  padding:"1.5rem",
+                  transition:"all 0.3s ease"
+                }}
+                onMouseEnter={(e)=>{e.currentTarget.style.transform="translateY(-5px)";e.currentTarget.style.boxShadow="0 10px 25px rgba(124,106,255,0.25)";}}
+                onMouseLeave={(e)=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none";}}
+              >
+                <div style={{display:"flex",justifyContent:"space-between"}}>
+                  <strong style={{color:"#fff"}}>{p.title}</strong>
+                  <span style={{color:"#9ca3af",fontSize:".75rem"}}>{p.period}</span>
                 </div>
-                <p style={{fontSize:".82rem",color:"#8882aa",lineHeight:1.65,marginBottom:".7rem"}}>{p.desc}</p>
-                <div style={{fontSize:".78rem",color:"#8882aa"}}>Tech: <span style={{color:"#6af0d4"}}>{p.tech.join(", ")}</span></div>
+                <p style={{color:"#9ca3af"}}>{p.desc}</p>
+                <div style={{color:"#6af0d4"}}>{p.tech.join(", ")}</div>
               </div>
             ))}
           </div>
         )}
-        {tab==="Extracurricular" && (
-          <div style={{display:"flex",flexDirection:"column",gap:".9rem"}}>
-            {data.extracurricular.map((e,i) => (
-              <div key={i} style={{display:"flex",gap:".9rem",alignItems:"flex-start",background:"#111118",border:"1px solid rgba(124,106,255,0.18)",borderRadius:12,padding:"1.2rem 1.5rem"}}>
-                <div style={{width:34,height:34,borderRadius:9,background:"rgba(106,240,212,0.1)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:".95rem",flexShrink:0}}>{e.icon}</div>
-                <div>
-                  <div style={{fontFamily:"'Syne',sans-serif",fontWeight:700,fontSize:".88rem",color:"#f0eeff",marginBottom:".2rem"}}>{e.title}</div>
-                  <div style={{fontSize:".8rem",color:"#8882aa",lineHeight:1.5}}>{e.desc}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+
+        {/* CERTIFICATES */}
         {tab==="Certificates" && (
-          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(240px,1fr))",gap:".9rem"}}>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(240px,1fr))",gap:"1rem"}}>
             {data.certs.map((c,i) => (
-              <div key={i} style={{background:"#111118",border:"1px solid rgba(124,106,255,0.18)",borderRadius:12,padding:"1.4rem",display:"flex",gap:".9rem",alignItems:"flex-start"}}>
-                <div style={{width:40,height:40,borderRadius:10,background:"linear-gradient(135deg,#7c6aff,#ff6ab0)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1.1rem",flexShrink:0}}>{c.icon}</div>
-                <div>
-                  <div style={{fontFamily:"'Syne',sans-serif",fontWeight:700,fontSize:".88rem",color:"#f0eeff",lineHeight:1.3,marginBottom:".25rem"}}>{c.name}</div>
-                  <div style={{fontSize:".76rem",color:"#8882aa"}}>{c.issuer}</div>
-                  <div style={{fontSize:".71rem",color:"#6af0d4",marginTop:".25rem",fontWeight:500}}>{c.date}</div>
-                </div>
+              <div key={i}
+                style={{
+                  background:"#111118",
+                  border:"1px solid rgba(124,106,255,0.25)",
+                  borderRadius:"14px",
+                  padding:"1.4rem",
+                  transition:"all 0.3s ease"
+                }}
+                onMouseEnter={(e)=>{e.currentTarget.style.transform="translateY(-5px)";e.currentTarget.style.boxShadow="0 10px 25px rgba(124,106,255,0.25)";}}
+                onMouseLeave={(e)=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none";}}
+              >
+                <strong style={{color:"#fff"}}>{c.name}</strong>
+                <div style={{color:"#9ca3af"}}>{c.issuer}</div>
+                <div style={{color:"#6af0d4"}}>{c.date}</div>
               </div>
             ))}
           </div>
         )}
+
       </FadeUp>
-<FadeUp delay={200}>
-  <a 
-    href="/Generalcvfinal.pdf" 
-    download="Suman_Kumari_CV.pdf"
-    style={{
-      display: "inline-flex",
-      alignItems: "center",
-      gap: ".5rem",
-      background: "#7c6aff",
-      color: "#fff",
-      padding: ".85rem 2rem",
-      borderRadius: 10,
-      textDecoration: "none",
-      fontSize: ".9rem",
-      fontWeight: 600,
-      marginTop: "1.5rem"
-    }}
-  >
-    📄 Download Resume
-  </a>
-</FadeUp>
-      
+
+      {/* 🔥 DOWNLOAD BUTTON */}
+      <FadeUp delay={200}>
+        <a 
+          href="/Generalcvfinal.pdf" 
+          download="Suman_Kumari_CV.pdf"
+          style={{
+            display:"inline-flex",
+            alignItems:"center",
+            gap:".5rem",
+            background:"linear-gradient(135deg,#7c6aff,#ff6ec7)",
+            color:"#fff",
+            padding:".9rem 2.2rem",
+            borderRadius:"999px",
+            textDecoration:"none",
+            fontWeight:600,
+            marginTop:"2rem",
+            boxShadow:"0 5px 20px rgba(124,106,255,0.4)",
+            transition:"all 0.3s ease"
+          }}
+          onMouseEnter={(e)=>{e.currentTarget.style.transform="translateY(-3px)";}}
+          onMouseLeave={(e)=>{e.currentTarget.style.transform="translateY(0)";}}
+        >
+          📄 Download Resume
+        </a>
+      </FadeUp>
+
     </section>
   );
 }
@@ -485,58 +678,245 @@ function Resume() {
 function Education() {
   return (
     <section id="education" style={{ padding:"6rem 6%",background:"#111118" }}>
-      <SectionHeader tag="Academic Background" title="Education" desc="Current B.Tech program details, specialization, CGPA, and previous academic records." />
-      <div style={{ display:"flex",flexDirection:"column",gap:"1.2rem",marginTop:"3rem" }}>
+      
+      <SectionHeader 
+        tag="Academic Background" 
+        title="Education" 
+        desc="Current B.Tech program details, specialization, CGPA, and previous academic records." 
+      />
+
+      <div style={{
+        display:"flex",
+        flexDirection:"column",
+        gap:"1.5rem",
+        marginTop:"3rem"
+      }}>
+
         {data.education.map((e,i) => (
           <FadeUp key={i} delay={i*100}>
-            <div style={{
-              background:"#0a0a0f",border:"1px solid rgba(124,106,255,0.18)",borderRadius:16,
-              padding:"1.8rem 2rem",display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:"1.5rem",
-              position:"relative",overflow:"hidden",transition:"all .25s",cursor:"default",
-            }}>
-              <div style={{position:"absolute",left:0,top:0,bottom:0,width:3,background:`linear-gradient(to bottom,${e.color},#7c6aff)`}}/>
-              <div style={{paddingLeft:".5rem"}}>
-                <div style={{fontFamily:"'Syne',sans-serif",fontWeight:800,fontSize:"1.05rem",color:"#f0eeff",marginBottom:".22rem"}}>{e.school}</div>
-                <div style={{fontSize:".77rem",color:"#8882aa",marginBottom:".55rem"}}>📍 {e.loc}</div>
-                <div style={{fontSize:".87rem",color:"#6af0d4",fontWeight:500,marginBottom:".35rem"}}>{e.degree}</div>
-                <div style={{display:"inline-flex",alignItems:"center",gap:".35rem",fontSize:".8rem",color:"#ff6ab0",fontWeight:700,background:"rgba(255,106,176,0.08)",border:"1px solid rgba(255,106,176,0.2)",borderRadius:6,padding:".22rem .65rem",marginTop:".2rem"}}>📊 {e.grade}</div>
+            
+            <div 
+              style={{
+                background:"#0a0a0f",
+                border:"1px solid rgba(124,106,255,0.2)",
+                borderRadius:"16px",
+                padding:"1.8rem 2rem",
+                display:"flex",
+                justifyContent:"space-between",
+                alignItems:"flex-start",
+                gap:"1.5rem",
+                position:"relative",
+                overflow:"hidden",
+                transition:"all 0.3s ease",
+                cursor:"default"
+              }}
+
+              // 🔥 HOVER EFFECT
+              onMouseEnter={(e)=>{
+                e.currentTarget.style.transform="translateY(-6px)";
+                e.currentTarget.style.boxShadow="0 10px 30px rgba(124,106,255,0.25)";
+              }}
+              onMouseLeave={(e)=>{
+                e.currentTarget.style.transform="translateY(0)";
+                e.currentTarget.style.boxShadow="none";
+              }}
+            >
+
+              {/* 🔥 LEFT GRADIENT LINE */}
+              <div style={{
+                position:"absolute",
+                left:0,
+                top:0,
+                bottom:0,
+                width:"4px",
+                background:`linear-gradient(to bottom,${e.color},#7c6aff)`
+              }}/>
+
+              {/* 🔥 LEFT CONTENT */}
+              <div style={{ paddingLeft:"0.6rem" }}>
+                
+                <div style={{
+                  fontFamily:"'Syne',sans-serif",
+                  fontWeight:800,
+                  fontSize:"1.1rem",
+                  color:"#ffffff",
+                  marginBottom:"0.25rem"
+                }}>
+                  {e.school}
+                </div>
+
+                <div style={{
+                  fontSize:"0.8rem",
+                  color:"#9ca3af",
+                  marginBottom:"0.6rem"
+                }}>
+                  📍 {e.loc}
+                </div>
+
+                <div style={{
+                  fontSize:"0.9rem",
+                  color:"#6af0d4",
+                  fontWeight:500,
+                  marginBottom:"0.4rem"
+                }}>
+                  {e.degree}
+                </div>
+
+                {/* 🔥 GRADE CHIP */}
+                <div style={{
+                  display:"inline-flex",
+                  alignItems:"center",
+                  gap:"0.4rem",
+                  fontSize:"0.8rem",
+                  color:"#ff6ab0",
+                  fontWeight:700,
+                  background:"rgba(255,106,176,0.1)",
+                  border:"1px solid rgba(255,106,176,0.3)",
+                  borderRadius:"999px",
+                  padding:"0.3rem 0.8rem",
+                  marginTop:"0.3rem"
+                }}>
+                  📊 {e.grade}
+                </div>
+
               </div>
-              <div style={{textAlign:"right",flexShrink:0}}>
-                <div style={{fontSize:".74rem",color:"#8882aa",background:"rgba(124,106,255,0.08)",border:"1px solid rgba(124,106,255,0.18)",borderRadius:7,padding:".3rem .85rem",whiteSpace:"nowrap"}}>{e.date}</div>
-                <div style={{fontSize:".7rem",color:"#7c6aff",textTransform:"uppercase",letterSpacing:".8px",fontWeight:600,marginTop:".45rem"}}>{e.type}</div>
+
+              {/* 🔥 RIGHT SIDE */}
+              <div style={{
+                textAlign:"right",
+                flexShrink:0
+              }}>
+
+                <div style={{
+                  fontSize:"0.75rem",
+                  color:"#a78bfa",
+                  background:"rgba(124,106,255,0.1)",
+                  border:"1px solid rgba(124,106,255,0.25)",
+                  borderRadius:"999px",
+                  padding:"0.35rem 0.9rem",
+                  whiteSpace:"nowrap"
+                }}>
+                  {e.date}
+                </div>
+
+                <div style={{
+                  fontSize:"0.72rem",
+                  color:"#7c6aff",
+                  textTransform:"uppercase",
+                  letterSpacing:"1px",
+                  fontWeight:600,
+                  marginTop:"0.5rem"
+                }}>
+                  {e.type}
+                </div>
+
               </div>
+
             </div>
+
           </FadeUp>
         ))}
+
       </div>
     </section>
   );
 }
-
 // ── SKILLS ────────────────────────────────────────────
 function Skills() {
   return (
     <section id="skills" style={{ padding:"6rem 6%",background:"#0a0a0f" }}>
-      <SectionHeader tag="What I Know" title="Skills & Expertise" desc="A blend of technical depth and collaborative soft skills honed through projects and training." />
-      <div style={{ display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",gap:"1.4rem",marginTop:"3rem" }}>
+      
+      <SectionHeader 
+        tag="What I Know" 
+        title="Skills & Expertise" 
+        desc="A blend of technical depth and collaborative soft skills honed through projects and training." 
+      />
+
+      <div style={{
+        display:"grid",
+        gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",
+        gap:"1.5rem",
+        marginTop:"3rem"
+      }}>
+
         {data.skills.map((s,i) => (
           <FadeUp key={i} delay={i*80}>
-            <div style={{background:"#111118",border:"1px solid rgba(124,106,255,0.18)",borderRadius:14,padding:"1.7rem",transition:"transform .25s,border-color .25s"}}>
-              <div style={{fontFamily:"'Syne',sans-serif",fontWeight:700,fontSize:".97rem",marginBottom:"1.1rem",display:"flex",alignItems:"center",gap:".6rem",color:"#f0eeff"}}>
-                <div style={{width:32,height:32,borderRadius:8,background:`${s.color}20`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1rem"}}>{s.icon}</div>
+            
+            <div 
+              style={{
+                background:"#111118",
+                border:"1px solid rgba(124,106,255,0.2)",
+                borderRadius:"16px",
+                padding:"1.7rem",
+                transition:"all 0.3s ease"
+              }}
+
+              // 🔥 HOVER EFFECT
+              onMouseEnter={(e)=>{
+                e.currentTarget.style.transform="translateY(-6px)";
+                e.currentTarget.style.boxShadow="0 10px 30px rgba(124,106,255,0.25)";
+              }}
+              onMouseLeave={(e)=>{
+                e.currentTarget.style.transform="translateY(0)";
+                e.currentTarget.style.boxShadow="none";
+              }}
+            >
+
+              {/* 🔥 HEADER */}
+              <div style={{
+                fontFamily:"'Syne',sans-serif",
+                fontWeight:700,
+                fontSize:"1rem",
+                marginBottom:"1.2rem",
+                display:"flex",
+                alignItems:"center",
+                gap:"0.7rem",
+                color:"#ffffff"
+              }}>
+                
+                {/* ICON */}
+                <div style={{
+                  width:34,
+                  height:34,
+                  borderRadius:10,
+                  background:`${s.color}20`,
+                  display:"flex",
+                  alignItems:"center",
+                  justifyContent:"center",
+                  fontSize:"1.1rem"
+                }}>
+                  {s.icon}
+                </div>
+
                 {s.title}
               </div>
-              <div style={{display:"flex",flexWrap:"wrap",gap:".45rem"}}>
+
+              {/* 🔥 TAGS */}
+              <div style={{
+                display:"flex",
+                flexWrap:"wrap",
+                gap:"0.5rem"
+              }}>
                 {s.tags.map((t,j) => (
                   <span key={j} style={{
-                    padding:".3rem .7rem",borderRadius:100,fontSize:".78rem",
-                    background:`${s.color}14`,border:`1px solid ${s.color}40`,color:s.color,
-                  }}>{t}</span>
+                    padding:"0.35rem 0.8rem",
+                    borderRadius:"999px",
+                    fontSize:"0.8rem",
+                    background:`${s.color}14`,
+                    border:`1px solid ${s.color}40`,
+                    color:s.color,
+                    transition:"all 0.3s ease"
+                  }}>
+                    {t}
+                  </span>
                 ))}
               </div>
+
             </div>
+
           </FadeUp>
         ))}
+
       </div>
     </section>
   );
@@ -552,21 +932,40 @@ function Projects() {
         desc="Full-stack applications from concept to deployment — solving real problems with clean code." 
       />
 
-      <div style={{ display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(300px,1fr))",gap:"1.4rem",marginTop:"3rem" }}>
+      <div style={{
+        display:"grid",
+        gridTemplateColumns:"repeat(auto-fit,minmax(300px,1fr))",
+        gap:"1.5rem",
+        marginTop:"3rem"
+      }}>
         
         {data.projects.map((p,i) => (
           <FadeUp key={i} delay={i*100}>
             
-          
-            <div style={{
-              background:"#0a0a0f",
-              border:"1px solid rgba(124,106,255,0.18)",
-              
-              overflow:"hidden",
-              display:"flex",
-              flexDirection:"column",
-              height:"100%"
-            }}>
+            <div 
+              style={{
+                background:"#0a0a0f",
+                border:"1px solid rgba(124,106,255,0.2)",
+                borderRadius:"16px",
+                overflow:"hidden",
+                display:"flex",
+                flexDirection:"column",
+                height:"100%",
+                transition:"all 0.3s ease"
+              }}
+
+              // 🔥 HOVER EFFECT
+              onMouseEnter={(e)=>{
+                e.currentTarget.style.transform="translateY(-6px)";
+                e.currentTarget.style.boxShadow="0 10px 30px rgba(124,106,255,0.25)";
+                e.currentTarget.querySelector("img").style.transform="scale(1.05)";
+              }}
+              onMouseLeave={(e)=>{
+                e.currentTarget.style.transform="translateY(0)";
+                e.currentTarget.style.boxShadow="none";
+                e.currentTarget.querySelector("img").style.transform="scale(1)";
+              }}
+            >
 
               {/* IMAGE */}
               <img 
@@ -576,74 +975,94 @@ function Projects() {
                   width:"100%",
                   height:"220px",
                   objectFit:"cover",
-                  objectPosition:"top"
+                  objectPosition:"top",
+                  transition:"all 0.3s ease"
                 }}
               />
 
+              {/* CONTENT */}
+              <div style={{
+                padding:"1.3rem",
+                display:"flex",
+                flexDirection:"column",
+                gap:"0.6rem",
+                flex:1
+              }}>
 
-  {/* 🔥 CONTENT */}
-  <div style={{ padding:"1.2rem", display:"flex", flexDirection:"column", gap:".6rem", flex:1 }}>
+                {/* TOP INFO */}
+                <div style={{
+                  display:"flex",
+                  justifyContent:"space-between",
+                  fontSize:"0.75rem",
+                  color:"#9ca3af"
+                }}>
+                  <span>{p.title}</span>
+                  <span>{p.period}</span>
+                </div>
 
-    <div style={{display:"flex",justifyContent:"space-between",fontSize:".75rem",color:"#9ca3af"}}>
-      <span>{p.title}</span>
-      <span>{p.period}</span>
-    </div>
+                {/* TITLE */}
+                <h3 style={{
+                  fontSize:"1.15rem",
+                  fontWeight:"700",
+                  color:"#ffffff"
+                }}>
+                  {p.title}
+                </h3>
 
-    <h3 style={{
-      fontSize:"1.1rem",
-      fontWeight:"700",
-      color:"#fff"
-    }}>
-      {p.title}
-    </h3>
+                {/* DESCRIPTION */}
+                <p style={{
+                  fontSize:"0.9rem",
+                  color:"#d1d5db",
+                  lineHeight:"1.6",
+                  flex:1
+                }}>
+                  {p.desc}
+                </p>
 
-    <p style={{
-      fontSize:".85rem",
-      color:"#9ca3af",
-      lineHeight:"1.6",
-      flex:1
-    }}>
-      {p.desc}
-    </p>
+                {/* TECH STACK */}
+                <div style={{
+                  display:"flex",
+                  flexWrap:"wrap",
+                  gap:"0.4rem"
+                }}>
+                  {p.tech.map((t,j) => (
+                    <span key={j} style={{
+                      padding:"0.3rem 0.7rem",
+                      background:"#111118",
+                      borderRadius:"999px",
+                      fontSize:"0.75rem",
+                      color:"#c4c4d4",
+                      border:"1px solid rgba(124,106,255,0.2)"
+                    }}>
+                      {t}
+                    </span>
+                  ))}
+                </div>
 
-    {/* 🔥 TECH STACK */}
-    <div style={{display:"flex",flexWrap:"wrap",gap:".4rem"}}>
-      {p.tech.map((t,j) => (
-        <span key={j} style={{
-          padding:".25rem .6rem",
-          background:"#111118",
-          borderRadius:"6px",
-          fontSize:".7rem",
-          color:"#c4c4d4"
-        }}>
-          {t}
-        </span>
-      ))}
-    </div>
+                {/* BUTTON */}
+                <div style={{
+                  display:"flex",
+                  gap:"1rem",
+                  marginTop:"0.6rem"
+                }}>
+                  <a 
+                    href={p.link} 
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      fontSize:"0.85rem",
+                      color:"#a78bfa",
+                      textDecoration:"none",
+                      fontWeight:500
+                    }}
+                  >
+                    🔗 View Code
+                  </a>
+                </div>
 
-    {/* 🔥 BUTTONS */}
-    <div style={{display:"flex",gap:"1rem",marginTop:"0.6rem"}}>
+              </div>
 
-      <a 
-        href={p.link} 
-        target="_blank"
-        rel="noreferrer"
-        style={{
-          fontSize:".8rem",
-          color:"#c4c4d4",
-          textDecoration:"none"
-        }}
-      >
-        🔗 GitHub
-      </a>
-
-      
-
-    </div>
-
-  </div>
-
-</div>
+            </div>
 
           </FadeUp>
         ))}
@@ -652,7 +1071,6 @@ function Projects() {
     </section>
   );
 }
-
 // ── CERTIFICATIONS ────────────────────────────────────
 function Certifications() {
   return (
@@ -663,23 +1081,36 @@ function Certifications() {
       <div style={{
         display:"grid",
         gridTemplateColumns:"repeat(auto-fit,minmax(300px,1fr))",
-        gap:"1.4rem",
+        gap:"1.5rem",
         marginTop:"3rem"
       }}>
 
         {data.certs.map((c,i) => (
           <FadeUp key={i} delay={i*80}>
             
-            <div style={{
-              background:"#0a0a0f",
-              border:"1px solid rgba(124,106,255,0.18)",
-              borderRadius:"16px",
-              overflow:"hidden",
-              display:"flex",
-              flexDirection:"column"
-            }}>
+            <div 
+              style={{
+                background:"#0a0a0f",
+                border:"1px solid rgba(124,106,255,0.2)",
+                borderRadius:"16px",
+                overflow:"hidden",
+                display:"flex",
+                flexDirection:"column",
+                transition:"all 0.3s ease"
+              }}
 
-              {/* 🔥 IMAGE TOP (LIKE PROJECTS) */}
+              // 🔥 HOVER EFFECT
+              onMouseEnter={(e)=>{
+                e.currentTarget.style.transform="translateY(-6px)";
+                e.currentTarget.style.boxShadow="0 10px 30px rgba(124,106,255,0.25)";
+              }}
+              onMouseLeave={(e)=>{
+                e.currentTarget.style.transform="translateY(0)";
+                e.currentTarget.style.boxShadow="none";
+              }}
+            >
+
+              {/* 🔥 IMAGE */}
               <img 
                 src={c.image}
                 alt={c.name}
@@ -687,33 +1118,37 @@ function Certifications() {
                   width:"100%",
                   height:"200px",
                   objectFit:"cover",
-                  objectPosition:"top"
+                  objectPosition:"top",
+                  transition:"all 0.3s ease"
                 }}
               />
 
               {/* 🔥 CONTENT */}
-              <div style={{ padding:"1.5rem", display:"flex", flexDirection:"column", gap:".6rem" }}>
+              <div style={{ padding:"1.5rem", display:"flex", flexDirection:"column", gap:"0.6rem" }}>
 
+                {/* DATE */}
                 <div style={{
-                  fontSize:".75rem",
+                  fontSize:"0.75rem",
                   color:"#6af0d4",
                   fontWeight:500
                 }}>
                   {c.date}
                 </div>
 
+                {/* TITLE */}
                 <h3 style={{
                   fontFamily:"'Syne',sans-serif",
                   fontWeight:800,
                   fontSize:"1.1rem",
-                  color:"#f0eeff"
+                  color:"#ffffff"
                 }}>
                   {c.name}
                 </h3>
 
+                {/* ISSUER */}
                 <p style={{
-                  fontSize:".85rem",
-                  color:"#8882aa"
+                  fontSize:"0.85rem",
+                  color:"#d1d5db"
                 }}>
                   {c.issuer}
                 </p>
@@ -729,27 +1164,95 @@ function Certifications() {
     </section>
   );
 }
-// ── ACHIEVEMENTS ──────────────────────────────────────
+//acievements
 function Achievements() {
   return (
-    <section id="achievements" style={{ padding:"6rem 6%",background:"#111118" }}>
+    <section
+      id="achievements"
+      style={{
+        padding: "6rem 6%",
+        background: "#111118"
+      }}
+    >
       <SectionHeader tag="Milestones" title="Achievements" />
-      <div style={{ display:"flex",flexDirection:"column",gap:".9rem",maxWidth:800,marginTop:"3rem" }}>
-        {data.achievements.map((a,i) => (
-          <FadeUp key={i} delay={i*80}>
-            <div style={{display:"flex",alignItems:"flex-start",gap:"1.1rem",background:"#0a0a0f",border:"1px solid rgba(124,106,255,0.18)",borderRadius:12,padding:"1.3rem 1.5rem"}}>
-              <div style={{fontFamily:"'Syne',sans-serif",fontSize:"1.7rem",fontWeight:800,color:"rgba(124,106,255,0.2)",lineHeight:1,flexShrink:0,width:38}}>{a.num}</div>
-              <div style={{fontSize:".92rem",color:"#8882aa",lineHeight:1.6,fontWeight:300}}>
-                <strong style={{color:"#f0eeff"}}>{a.highlight}</strong> — {a.text.replace(a.highlight,"").replace(" — ","")}
+
+      {/* 🔥 Grid Layout (like skills) */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+          gap: "1.5rem",
+          marginTop: "3rem"
+        }}
+      >
+        {data.achievements.map((a, i) => (
+          <FadeUp key={i} delay={i * 80}>
+            
+            <div
+              style={{
+                background: "#0a0a0f",
+                border: "1px solid rgba(124,106,255,0.2)",
+                borderRadius: "16px",
+                padding: "1.5rem",
+                transition: "all 0.3s ease"
+              }}
+
+              // 🔥 Hover
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-6px)";
+                e.currentTarget.style.boxShadow =
+                  "0 10px 30px rgba(124,106,255,0.25)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+            >
+
+              {/* 🔢 Number */}
+              <div style={{
+                fontSize: "0.8rem",
+                color: "#7c6aff",
+                marginBottom: "0.6rem",
+                fontWeight: 500
+              }}>
+                {a.num}
               </div>
+
+              {/* 🔥 Highlight Chip */}
+              <div
+                style={{
+                  display: "inline-block",
+                  padding: "6px 12px",
+                  borderRadius: "999px",
+                  border: "1px solid rgba(124,106,255,0.3)",
+                  color: "#a78bfa",
+                  fontSize: "0.8rem",
+                  marginBottom: "0.8rem"
+                }}
+              >
+                {a.highlight}
+              </div>
+
+              {/* 📝 Text */}
+              <p
+                style={{
+                  fontSize: "0.9rem",
+                  color: "#d1d5db",
+                  lineHeight: 1.6
+                }}
+              >
+                {a.text.replace(a.highlight, "").replace(" — ", "")}
+              </p>
+
             </div>
+
           </FadeUp>
         ))}
       </div>
     </section>
   );
 }
-
 // ── CONTACT ───────────────────────────────────────────
 function Contact() {
   return (
