@@ -33,7 +33,7 @@ const data = {
   { 
     period: "Oct 2025 – Dec 2025",
     title: "Real-Time Sports Scoreboard",
-    desc: "I created a learning platform where students can upload, share, and discuss study materials. It includes login, file sharing, and review features to make learning easier.",
+    desc: "I built a sports scoreboard website that shows live scores, upcoming matches, and team rankings in real-time. It helps users easily track sports events in one place.",
     tech: ["React.js", "Node.js", "Express", "MongoDB", "JavaScript"],
     link: "https://github.com/suman-k0609/Score-Pulse",
     image: peer1
@@ -42,7 +42,7 @@ const data = {
   { 
     period: "Feb 2025 – Apr 2025",
     title: "Peer-to-Peer Learning Platform",
-    desc: "Collaborative resource-sharing platform enabling students to upload, share, and discuss study materials with secure authentication, file management, and review systems.",
+    desc: "I created a learning platform where students can upload, share, and discuss study materials. It includes login, file sharing, and review features to make learning easier.",
     tech: ["PHP", "MySQL", "JavaScript", "Tailwind CSS", "HTML"],
     link: "https://github.com/suman-k0609/peerconnectproject",
     image: peer
