@@ -497,13 +497,21 @@ function About() {
 function Resume() {
   const [tab, setTab] = useState("Education");
 
+  const icons = {
+    Education: "🎓",
+    Skills: "⚡",
+    Projects: "💼",
+    Achievements: "🏆",
+    Certificates: "📜"
+  };
+
   return (
-    <section id="resume" style={{ padding:"6rem 6%",background:"#0a0a0f" }}>
-      
+    <section id="resume" style={{ padding:"6rem 6%", background:"#0a0a0f" }}>
+
       <SectionHeader 
-        tag="My Resume" 
-        title="My Resume" 
-        desc="Contact details, education, skills, projects & certifications — tailored for tech industry roles." 
+        tag="My Resume"
+        title="My Resume"
+        desc="Contact details, education, skills, projects & certifications."
       />
 
       {/* 🔥 CONTACT BAR */}
@@ -512,17 +520,16 @@ function Resume() {
           background:"#111118",
           border:"1px solid rgba(124,106,255,0.25)",
           borderRadius:"14px",
-          padding:"1rem 1.8rem",
+          padding:"1rem",
           display:"flex",
           flexWrap:"wrap",
-          gap:"1.5rem",
+          gap:"1rem",
           justifyContent:"center",
-          margin:"2rem 0",
-          boxShadow:"0 0 15px rgba(124,106,255,0.1)"
+          margin:"2rem 0"
         }}>
           {[["📧",data.email,`mailto:${data.email}`],["📱",data.phone,null],["💼","LinkedIn",data.linkedin],["🐙","GitHub",data.github]].map(([icon,label,href],i) => (
-            <div key={i} style={{display:"flex",alignItems:"center",gap:".45rem",fontSize:".85rem",color:"#9ca3af"}}>
-              {icon} {href ? <a href={href} target="_blank" rel="noreferrer" style={{color:"#9ca3af",textDecoration:"none"}}>{label}</a> : <span>{label}</span>}
+            <div key={i} style={{color:"#9ca3af"}}>
+              {icon} {href ? <a href={href} target="_blank">{label}</a> : label}
             </div>
           ))}
         </div>
@@ -530,22 +537,17 @@ function Resume() {
 
       {/* 🔥 TABS */}
       <FadeUp delay={100}>
-        <div style={{ display:"flex",gap:".6rem",flexWrap:"wrap",marginBottom:"2rem" }}>
-          {data.resumeTabs.map(t => (
+        <div style={{ display:"flex", gap:".6rem", flexWrap:"wrap", marginBottom:"2rem" }}>
+          {["Education","Skills","Projects","Achievements","Certificates"].map(t => (
             <button key={t} onClick={()=>setTab(t)} style={{
-              padding:".55rem 1.3rem",
+              padding:".5rem 1.2rem",
               borderRadius:"999px",
-              fontSize:".85rem",
               cursor:"pointer",
-              transition:"all 0.3s ease",
-              background: tab===t 
-                ? "linear-gradient(135deg,#7c6aff,#ff6ec7)" 
-                : "transparent",
+              background: tab===t ? "linear-gradient(135deg,#7c6aff,#ff6ec7)" : "transparent",
               color: tab===t ? "#fff" : "#9ca3af",
-              border: tab===t ? "none" : "1px solid rgba(124,106,255,0.25)",
-              boxShadow: tab===t ? "0 5px 20px rgba(124,106,255,0.4)" : "none",
+              border:"1px solid rgba(124,106,255,0.25)"
             }}>
-              {{Education:"🎓",Skills:"⚡",Projects:"💼",Extracurricular:"🏆",Certificates:"📜"}[t]} {t}
+              {icons[t]} {t}
             </button>
           ))}
         </div>
@@ -555,149 +557,52 @@ function Resume() {
       <FadeUp delay={150}>
 
         {/* EDUCATION */}
-        {tab==="Education" && (
-          <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
-            {data.education.map((e,i) => (
-              <div key={i}
-                style={{
-                  background:"#111118",
-                  border:"1px solid rgba(124,106,255,0.25)",
-                  borderRadius:"14px",
-                  padding:"1.6rem 1.9rem",
-                  transition:"all 0.3s ease"
-                }}
-                onMouseEnter={(e)=>{e.currentTarget.style.transform="translateY(-5px)";e.currentTarget.style.boxShadow="0 10px 25px rgba(124,106,255,0.25)";}}
-                onMouseLeave={(e)=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none";}}
-              >
-                <div style={{color:"#6af0d4",fontSize:".75rem",marginBottom:".3rem"}}>{e.degree}</div>
-                <div style={{display:"flex",justifyContent:"space-between"}}>
-                  <strong style={{color:"#fff"}}>{e.school}</strong>
-                  <span style={{color:"#9ca3af",fontSize:".75rem"}}>{e.date}</span>
-                </div>
-                <div style={{color:"#9ca3af",fontSize:".85rem"}}>
-                  {e.loc} · Grade: <span style={{color:"#a78bfa"}}>{e.grade}</span>
-                </div>
-              </div>
-            ))}
+        {tab==="Education" && data.education.map((e,i)=>(
+          <div key={i} style={card}>
+            <div>{e.degree}</div>
+            <strong>{e.school}</strong>
+            <div>{e.loc} • {e.grade}</div>
           </div>
-        )}
+        ))}
 
         {/* SKILLS */}
-        {tab==="Skills" && (
-          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(230px,1fr))",gap:"1rem"}}>
-            {data.skills.map((s,i) => (
-              <div key={i}
-                style={{
-                  background:"#111118",
-                  border:"1px solid rgba(124,106,255,0.25)",
-                  borderRadius:"14px",
-                  padding:"1.3rem",
-                  transition:"all 0.3s ease"
-                }}
-                onMouseEnter={(e)=>{e.currentTarget.style.transform="translateY(-5px)";e.currentTarget.style.boxShadow="0 10px 25px rgba(124,106,255,0.25)";}}
-                onMouseLeave={(e)=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none";}}
-              >
-                <strong style={{color:"#fff"}}>{s.title}</strong>
-                <div style={{marginTop:"0.5rem",color:"#9ca3af"}}>{s.tags.join(", ")}</div>
-              </div>
-            ))}
+        {tab==="Skills" && data.skills.map((s,i)=>(
+          <div key={i} style={card}>
+            <strong>{s.title}</strong>
+            <div>{s.tags.join(", ")}</div>
           </div>
-        )}
+        ))}
 
         {/* PROJECTS */}
-        {tab==="Projects" && (
-          <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
-            {data.projects.map((p,i) => (
-              <div key={i}
-                style={{
-                  background:"#111118",
-                  border:"1px solid rgba(124,106,255,0.25)",
-                  borderRadius:"14px",
-                  padding:"1.5rem",
-                  transition:"all 0.3s ease"
-                }}
-                onMouseEnter={(e)=>{e.currentTarget.style.transform="translateY(-5px)";e.currentTarget.style.boxShadow="0 10px 25px rgba(124,106,255,0.25)";}}
-                onMouseLeave={(e)=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none";}}
-              >
-                <div style={{display:"flex",justifyContent:"space-between"}}>
-                  <strong style={{color:"#fff"}}>{p.title}</strong>
-                  <span style={{color:"#9ca3af",fontSize:".75rem"}}>{p.period}</span>
-                </div>
-                <p style={{color:"#9ca3af"}}>{p.desc}</p>
-                <div style={{color:"#6af0d4"}}>{p.tech.join(", ")}</div>
-              </div>
-            ))}
+        {tab==="Projects" && data.projects.map((p,i)=>(
+          <div key={i} style={card}>
+            <strong>{p.title}</strong>
+            <p>{p.desc}</p>
+            <div>{p.tech.join(", ")}</div>
           </div>
-        )}
-        {/* EXTRACURRICULAR */}
-{tab === "Extracurricular" && (
-  <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
-    {data.extracurricular.map((e,i) => (
-      <div key={i}
-        style={{
-          background:"#111118",
-          border:"1px solid rgba(124,106,255,0.25)",
-          borderRadius:"14px",
-          padding:"1.5rem",
-          transition:"all 0.3s ease"
-        }}
-        onMouseEnter={(e)=>{e.currentTarget.style.transform="translateY(-5px)";e.currentTarget.style.boxShadow="0 10px 25px rgba(124,106,255,0.25)";}}
-        onMouseLeave={(e)=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none";}}
-      >
-        <strong style={{color:"#fff"}}>{e.title}</strong>
-        <p style={{color:"#9ca3af"}}>{e.desc}</p>
-      </div>
-    ))}
-  </div>
-)}
+        ))}
+
+        {/* ACHIEVEMENTS */}
+        {tab==="Achievements" && data.achievements.map((a,i)=>(
+          <div key={i} style={card}>
+            <strong>{a.title}</strong>
+            <p>{a.desc}</p>
+          </div>
+        ))}
 
         {/* CERTIFICATES */}
-        {tab==="Certificates" && (
-          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(240px,1fr))",gap:"1rem"}}>
-            {data.certs.map((c,i) => (
-              <div key={i}
-                style={{
-                  background:"#111118",
-                  border:"1px solid rgba(124,106,255,0.25)",
-                  borderRadius:"14px",
-                  padding:"1.4rem",
-                  transition:"all 0.3s ease"
-                }}
-                onMouseEnter={(e)=>{e.currentTarget.style.transform="translateY(-5px)";e.currentTarget.style.boxShadow="0 10px 25px rgba(124,106,255,0.25)";}}
-                onMouseLeave={(e)=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none";}}
-              >
-                <strong style={{color:"#fff"}}>{c.name}</strong>
-                <div style={{color:"#9ca3af"}}>{c.issuer}</div>
-                <div style={{color:"#6af0d4"}}>{c.date}</div>
-              </div>
-            ))}
+        {tab==="Certificates" && data.certs.map((c,i)=>(
+          <div key={i} style={card}>
+            <strong>{c.name}</strong>
+            <div>{c.issuer}</div>
           </div>
-        )}
+        ))}
 
       </FadeUp>
 
-      {/* 🔥 DOWNLOAD BUTTON */}
+      {/* 🔥 DOWNLOAD */}
       <FadeUp delay={200}>
-        <a 
-          href="/Generalcvfinal.pdf" 
-          download="Suman_Kumari_CV.pdf"
-          style={{
-            display:"inline-flex",
-            alignItems:"center",
-            gap:".5rem",
-            background:"linear-gradient(135deg,#7c6aff,#ff6ec7)",
-            color:"#fff",
-            padding:".9rem 2.2rem",
-            borderRadius:"999px",
-            textDecoration:"none",
-            fontWeight:600,
-            marginTop:"2rem",
-            boxShadow:"0 5px 20px rgba(124,106,255,0.4)",
-            transition:"all 0.3s ease"
-          }}
-          onMouseEnter={(e)=>{e.currentTarget.style.transform="translateY(-3px)";}}
-          onMouseLeave={(e)=>{e.currentTarget.style.transform="translateY(0)";}}
-        >
+        <a href="/Generalcvfinal.pdf" download style={btn}>
           📄 Download Resume
         </a>
       </FadeUp>
@@ -706,153 +611,25 @@ function Resume() {
   );
 }
 
-// ── EDUCATION ─────────────────────────────────────────
-function Education() {
-  return (
-    <section id="education" style={{ padding:"6rem 6%",background:"#111118" }}>
-      
-      <SectionHeader 
-        tag="Academic Background" 
-        title="Education" 
-        desc="Current B.Tech program details, specialization, CGPA, and previous academic records." 
-      />
+/* 🔥 COMMON STYLES */
+const card = {
+  background:"#111118",
+  border:"1px solid rgba(124,106,255,0.25)",
+  borderRadius:"14px",
+  padding:"1.5rem",
+  marginBottom:"1rem",
+  color:"#fff"
+};
 
-      <div style={{
-        display:"flex",
-        flexDirection:"column",
-        gap:"1.5rem",
-        marginTop:"3rem"
-      }}>
-
-        {data.education.map((e,i) => (
-          <FadeUp key={i} delay={i*100}>
-            
-            <div 
-              style={{
-                background:"#0a0a0f",
-                border:"1px solid rgba(124,106,255,0.2)",
-                borderRadius:"16px",
-                padding:"1.8rem 2rem",
-                display:"flex",
-                justifyContent:"space-between",
-                alignItems:"flex-start",
-                gap:"1.5rem",
-                position:"relative",
-                overflow:"hidden",
-                transition:"all 0.3s ease",
-                cursor:"default"
-              }}
-
-              // 🔥 HOVER EFFECT
-              onMouseEnter={(e)=>{
-                e.currentTarget.style.transform="translateY(-6px)";
-                e.currentTarget.style.boxShadow="0 10px 30px rgba(124,106,255,0.25)";
-              }}
-              onMouseLeave={(e)=>{
-                e.currentTarget.style.transform="translateY(0)";
-                e.currentTarget.style.boxShadow="none";
-              }}
-            >
-
-              {/* 🔥 LEFT GRADIENT LINE */}
-              <div style={{
-                position:"absolute",
-                left:0,
-                top:0,
-                bottom:0,
-                width:"4px",
-                background:`linear-gradient(to bottom,${e.color},#7c6aff)`
-              }}/>
-
-              {/* 🔥 LEFT CONTENT */}
-              <div style={{ paddingLeft:"0.6rem" }}>
-                
-                <div style={{
-                  fontFamily:"'Syne',sans-serif",
-                  fontWeight:800,
-                  fontSize:"1.1rem",
-                  color:"#ffffff",
-                  marginBottom:"0.25rem"
-                }}>
-                  {e.school}
-                </div>
-
-                <div style={{
-                  fontSize:"0.8rem",
-                  color:"#9ca3af",
-                  marginBottom:"0.6rem"
-                }}>
-                  📍 {e.loc}
-                </div>
-
-                <div style={{
-                  fontSize:"0.9rem",
-                  color:"#6af0d4",
-                  fontWeight:500,
-                  marginBottom:"0.4rem"
-                }}>
-                  {e.degree}
-                </div>
-
-                {/* 🔥 GRADE CHIP */}
-                <div style={{
-                  display:"inline-flex",
-                  alignItems:"center",
-                  gap:"0.4rem",
-                  fontSize:"0.8rem",
-                  color:"#ff6ab0",
-                  fontWeight:700,
-                  background:"rgba(255,106,176,0.1)",
-                  border:"1px solid rgba(255,106,176,0.3)",
-                  borderRadius:"999px",
-                  padding:"0.3rem 0.8rem",
-                  marginTop:"0.3rem"
-                }}>
-                  📊 {e.grade}
-                </div>
-
-              </div>
-
-              {/* 🔥 RIGHT SIDE */}
-              <div style={{
-                textAlign:"right",
-                flexShrink:0
-              }}>
-
-                <div style={{
-                  fontSize:"0.75rem",
-                  color:"#a78bfa",
-                  background:"rgba(124,106,255,0.1)",
-                  border:"1px solid rgba(124,106,255,0.25)",
-                  borderRadius:"999px",
-                  padding:"0.35rem 0.9rem",
-                  whiteSpace:"nowrap"
-                }}>
-                  {e.date}
-                </div>
-
-                <div style={{
-                  fontSize:"0.72rem",
-                  color:"#7c6aff",
-                  textTransform:"uppercase",
-                  letterSpacing:"1px",
-                  fontWeight:600,
-                  marginTop:"0.5rem"
-                }}>
-                  {e.type}
-                </div>
-
-              </div>
-
-            </div>
-
-          </FadeUp>
-        ))}
-
-      </div>
-    </section>
-  );
-}
+const btn = {
+  display:"inline-block",
+  marginTop:"2rem",
+  padding:".8rem 2rem",
+  borderRadius:"999px",
+  background:"linear-gradient(135deg,#7c6aff,#ff6ec7)",
+  color:"#fff",
+  textDecoration:"none"
+};
 // ── SKILLS ────────────────────────────────────────────
 function Skills() {
   return (
