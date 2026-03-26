@@ -113,7 +113,7 @@ const data = {
     { school: "SPS Balhn More Areraj", loc: "Motihari, Bihar", degree: "Matriculation (10th)", grade: "90%", date: "Apr 2019 – May 2020", type: "Completed", color: "#ff6ab0" },
   ],
   resumeTabs: ["Education", "Skills", "Projects", "Achievements", "Certificates"],
-  achievements: [
+  extracurricular: [
     {
     icon: "🏆",
     title: "350+ Problems Solved",
@@ -545,7 +545,7 @@ function Resume() {
               border: tab===t ? "none" : "1px solid rgba(124,106,255,0.25)",
               boxShadow: tab===t ? "0 5px 20px rgba(124,106,255,0.4)" : "none",
             }}>
-              {{Education:"🎓",Skills:"⚡",Projects:"💼",achievements:"🏆",Certificates:"📜"}[t]} {t}
+              {{Education:"🎓",Skills:"⚡",Projects:"💼",Extracurricular:"🏆",Certificates:"📜"}[t]} {t}
             </button>
           ))}
         </div>
@@ -629,10 +629,10 @@ function Resume() {
             ))}
           </div>
         )}
-        {/* ACHIEVEMENTS */}
-{tab === "achievements" && (
+        {/* EXTRACURRICULAR */}
+{tab === "Extracurricular" && (
   <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
-    {data.achievements.map((e,i) => (
+    {data.extracurricular.map((e,i) => (
       <div key={i}
         style={{
           background:"#111118",
