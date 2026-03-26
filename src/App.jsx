@@ -57,7 +57,23 @@ const data = {
     image: peer2
   },
 ],
- 
+ extracurricular: [
+  {
+    icon: "🏆",
+    title: "350+ Problems Solved",
+    desc: "Solved 200+ problems on LeetCode and 150+ on GeeksforGeeks improving problem-solving skills."
+  },
+  {
+    icon: "🏅",
+    title: "LeetCode Badges",
+    desc: "Earned multiple badges including 50 Days Badge showing consistency and daily practice."
+  },
+  {
+    icon: "🎯",
+    title: "NPTEL Elite Grade",
+    desc: "Achieved Elite grade in Cloud Computing from IIT Kharagpur with strong understanding."
+  }
+],
   certs: [
     {
       name: "Generative AI Professional",
