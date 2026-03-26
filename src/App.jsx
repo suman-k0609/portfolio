@@ -36,7 +36,7 @@ const data = {
     desc: "I created a learning platform where students can upload, share, and discuss study materials. It includes login, file sharing, and review features to make learning easier.",
     tech: ["React.js", "Node.js", "Express", "MongoDB", "JavaScript"],
     link: "https://github.com/suman-k0609/Score-Pulse",
-    image: peer
+    image: peer1
   },
 
   { 
@@ -45,7 +45,7 @@ const data = {
     desc: "Collaborative resource-sharing platform enabling students to upload, share, and discuss study materials with secure authentication, file management, and review systems.",
     tech: ["PHP", "MySQL", "JavaScript", "Tailwind CSS", "HTML"],
     link: "https://github.com/suman-k0609/peerconnectproject",
-    image: peer1
+    image: peer
   },
 
   { 
