@@ -112,8 +112,8 @@ const data = {
     { school: "T. P. Verma College", loc: "Patna, Bihar", degree: "Intermediate (12th) — Science", grade: "85.4%", date: "Apr 2021 – May 2022", type: "Completed", color: "#6af0d4" },
     { school: "SPS Balhn More Areraj", loc: "Motihari, Bihar", degree: "Matriculation (10th)", grade: "90%", date: "Apr 2019 – May 2020", type: "Completed", color: "#ff6ab0" },
   ],
-  resumeTabs: ["Education", "Skills", "Projects", "Extracurricular", "Certificates"],
-  extracurricular: [
+  resumeTabs: ["Education", "Skills", "Projects", "Achievements", "Certificates"],
+  achievements: [
     {
     icon: "🏆",
     title: "350+ Problems Solved",
@@ -545,7 +545,7 @@ function Resume() {
               border: tab===t ? "none" : "1px solid rgba(124,106,255,0.25)",
               boxShadow: tab===t ? "0 5px 20px rgba(124,106,255,0.4)" : "none",
             }}>
-              {{Education:"🎓",Skills:"⚡",Projects:"💼",Extracurricular:"🏆",Certificates:"📜"}[t]} {t}
+              {{Education:"🎓",Skills:"⚡",Projects:"💼",achievements:"🏆",Certificates:"📜"}[t]} {t}
             </button>
           ))}
         </div>
@@ -629,10 +629,10 @@ function Resume() {
             ))}
           </div>
         )}
-        {/* EXTRACURRICULAR */}
-{tab === "Extracurricular" && (
+        {/* ACHIEVEMENTS */}
+{tab === "achievements" && (
   <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
-    {data.extracurricular.map((e,i) => (
+    {data.achievements.map((e,i) => (
       <div key={i}
         style={{
           background:"#111118",
