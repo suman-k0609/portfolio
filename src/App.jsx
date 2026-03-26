@@ -618,10 +618,10 @@ function Resume() {
             ))}
           </div>
         )}
-        {/* EXTRACURRICULAR */}
-{tab === "Extracurricular" && (
+        {/* ACHIEVEMENTS */}
+{tab === "Achievements" && (
   <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
-    {data.extracurricular.map((e,i) => (
+    {data.achievements.map((e,i) => (
       <div key={i}
         style={{
           background:"#111118",
