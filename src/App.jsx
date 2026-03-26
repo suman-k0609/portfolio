@@ -112,7 +112,7 @@ const data = {
     { school: "T. P. Verma College", loc: "Patna, Bihar", degree: "Intermediate (12th) — Science", grade: "85.4%", date: "Apr 2021 – May 2022", type: "Completed", color: "#6af0d4" },
     { school: "SPS Balhn More Areraj", loc: "Motihari, Bihar", degree: "Matriculation (10th)", grade: "90%", date: "Apr 2019 – May 2020", type: "Completed", color: "#ff6ab0" },
   ],
-  resumeTabs: ["Education", "Skills", "Projects", "Achievements", "Certificates"],
+  resumeTabs: ["Education", "Skills", "Projects", "Extracurricular", "Certificates"],
   extracurricular: [
     {
     icon: "🏆",
