@@ -1104,7 +1104,7 @@ function Projects() {
                       fontWeight:500
                     }}
                   >
-                    🔗 View Code
+                    🔗 view on Github
                   </a>
                 </div>
 
