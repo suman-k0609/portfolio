@@ -545,7 +545,7 @@ function Resume() {
               border: tab===t ? "none" : "1px solid rgba(124,106,255,0.25)",
               boxShadow: tab===t ? "0 5px 20px rgba(124,106,255,0.4)" : "none",
             }}>
-              {{Education:"🎓",Skills:"⚡",Projects:"💼",Achievements:"🏆",Certificates:"📜"}[t]} {t}
+              {{Education:"🎓",Skills:"⚡",Projects:"💼",Extracurriicular:"🏆",Certificates:"📜"}[t]} {t}
             </button>
           ))}
         </div>
