@@ -618,6 +618,27 @@ function Resume() {
             ))}
           </div>
         )}
+        {/* EXTRACURRICULAR */}
+{tab === "Extracurricular" && (
+  <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
+    {data.extracurricular.map((e,i) => (
+      <div key={i}
+        style={{
+          background:"#111118",
+          border:"1px solid rgba(124,106,255,0.25)",
+          borderRadius:"14px",
+          padding:"1.5rem",
+          transition:"all 0.3s ease"
+        }}
+        onMouseEnter={(e)=>{e.currentTarget.style.transform="translateY(-5px)";e.currentTarget.style.boxShadow="0 10px 25px rgba(124,106,255,0.25)";}}
+        onMouseLeave={(e)=>{e.currentTarget.style.transform="translateY(0)";e.currentTarget.style.boxShadow="none";}}
+      >
+        <strong style={{color:"#fff"}}>{e.title}</strong>
+        <p style={{color:"#9ca3af"}}>{e.desc}</p>
+      </div>
+    ))}
+  </div>
+)}
 
         {/* CERTIFICATES */}
         {tab==="Certificates" && (
